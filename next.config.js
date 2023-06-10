@@ -1,4 +1,13 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
 
-module.exports = nextConfig
+module.exports = {
+    trailingSlash: true,
+    async redirects() {
+        return [
+            {
+                source: '/perguntas',
+                destination: '/faq/',
+                permanent: true,
+            },
+        ]
+    },
+}
